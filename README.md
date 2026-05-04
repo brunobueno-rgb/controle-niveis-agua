@@ -1,39 +1,23 @@
-# controle-niveis-agua
-from colorama import Fore, Style, init
+README
+# Controle de Níveis de Água
 
-# Inicializa o colorama
-init(autoreset=True)
+Sistema simples desenvolvido em Python para simular o monitoramento de um reservatório de água no terminal.
 
-# Lista com os níveis do reservatório
-niveis = [
-    "Nível 1 - Muito baixo (crítico)",
-    "Nível 2 - Baixo",
-    "Nível 3 - Médio",
-    "Nível 4 - Alto",
-    "Nível 5 - Muito alto (alerta)"
-]
+## Tecnologias utilizadas
+- Python
+- Biblioteca Colorama
 
-# Função para definir a cor da mensagem
-def definir_cor(nivel):
-    if nivel == 1:
-        return Fore.RED
-    elif nivel == 2:
-        return Fore.YELLOW
-    elif nivel == 3:
-        return Fore.GREEN
-    elif nivel == 4:
-        return Fore.CYAN
-    elif nivel == 5:
-        return Fore.BLUE
-    else:
-        return Fore.WHITE
+## Funcionalidades
+- Exibição de níveis do reservatório
+- Alertas coloridos conforme o nível
+- Uso de listas e funções
 
-# Exibe os níveis do reservatório
-for i in range(len(niveis)):
-    nivel = i + 1
-    cor = definir_cor(nivel)
+## Como executar
 
-    print(cor + niveis[i])
+Instale a biblioteca:
 
-# Restaura o estilo padrão
-print(Style.RESET_ALL)
+pip install colorama
+
+Execute o programa:
+
+python reservatorio.py
